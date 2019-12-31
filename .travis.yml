@@ -8,6 +8,6 @@ before_install:
 - chmod +x other_demo/mvnw
 
 script:
-  - mvn  -B  demo/pom.xml test
-  - mvn  -B  other_demo/pom.xml test
+  - mvn  -B  /demo/pom.xml test
+  - mvn  -B  ./other_demo/pom.xml test
   
