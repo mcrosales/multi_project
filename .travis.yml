@@ -4,7 +4,8 @@ jdk:
 - openjdk8
 dist: trusty
 before_install:
-- chmod +x mvnw
+- chmod +x demo/mvnw
+- chmod +x other_demo/mvnw
 
 script:
   - mvn -q -B -f demo/pom.xml clean test
