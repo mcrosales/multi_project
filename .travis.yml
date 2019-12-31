@@ -8,5 +8,5 @@ before_install:
 - chmod +x other_demo/mvnw
 
 script:
-  - mvn -q -B -f demo/pom.xml clean test
-  - mvn -q -B -f other_demo/pom.xml clean test
+  - mvnw -B  demo/pom.xml test
+  - mvnw -B  other_demo/pom.xml test
