@@ -9,7 +9,7 @@ jobs:
       # specify the version you desire here
       - image: circleci/openjdk:8-jdk
 
-    working_directory: ~/repo
+    working_directory: ~/multi_project/demo
 
     environment:
       # Customize the JVM maximum heap limit
@@ -17,6 +17,7 @@ jobs:
 
     steps:
       - checkout
+          path: ~/multi_project  
       - run:
           name: Generate cumulative pom.xml checksum
           command: |
@@ -38,5 +39,5 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      - run: mvn -B -f demo/pom.xml test 
-      - run: mvn -B -f other_demo/pom.xml test 
+      - run: mvn test 
+      #- run: mvn -B -f other_demo/pom.xml test 
