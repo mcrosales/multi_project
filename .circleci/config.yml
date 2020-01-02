@@ -16,7 +16,7 @@ jobs:
       MAVEN_OPTS: -Xmx3200m
 
     steps:
-      - checkout
+      - checkout:
           path: ~/multi_project  
       - run:
           name: Generate cumulative pom.xml checksum
